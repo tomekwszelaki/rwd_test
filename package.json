@@ -1,0 +1,25 @@
+{
+  "name": "rwd_test",
+  "version": "0.0.1",
+  "description": "An example module to illustrate testing responsive webs",
+  "author": "Tomasz Jacek Wszelaki <tomekwszelaki@gmail.com>",
+  "contributors": [],
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/tomekwszelaki/rwd_test"
+},
+  "bugs": {
+  "url": "https://github.com/tomekwszelaki/rwd_test/issues"
+},
+  "keywords": [
+  "bdd",
+  "responsive web design",
+  "cucumber"
+],
+  "dependencies": {
+    "cucumber": "0.48.0",
+    "should": "5.1.0",
+    "selenium-webdriver": "2.45.1"
+  },  
+  "license": "MIT"
+}
