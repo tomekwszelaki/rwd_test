@@ -2,7 +2,11 @@
 A small proof of concept for testing responsive webs
 
 # How to run
-Because the node_moduels are uploaded as well it's as simple as running
+You need a globally installed cucumber (it's easiest that way), so:
+`npm install -g cucumber`
+Then clone the repo, install other dependencies and run the tests:
 ```
+cd rwd_test
+npm install
 cucumber-js
 ```
