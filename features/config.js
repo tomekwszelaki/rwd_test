@@ -1,3 +1,10 @@
+var envs = {
+    test1: {
+        allegro: 'http://allegro.pl/',
+        aukro_cz: 'http://aukro.cz/'
+    }
+    // Define the rest of the environments here
+};
 
 var devices = {
     NEXUS_4: {
@@ -20,8 +27,13 @@ var getConfigFor = function(device) {
     return devices[device] || null;
 };
 
+var runOn = function(env) {
+    return envs[env] || null;
+};
+
 module.exports = {
-    getConfigFor: getConfigFor
+    getConfigFor: getConfigFor,
+    runOn: runOn
 };
 
 
