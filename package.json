@@ -17,10 +17,8 @@
   "cucumber"
 ],
   "dependencies": {
-    "cucumber": "0.4.8",
     "should": "5.1.0",
     "selenium-webdriver": "2.45.1"
   },
-  "preferGlobal": true,
   "license": "MIT"
 }
