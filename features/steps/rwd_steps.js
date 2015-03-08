@@ -8,6 +8,7 @@ var webdriver = require('selenium-webdriver'),
 
 var rwd_steps = function() {
     this.World = require('../world').World;
+    var env = config.runOn(process.env.ALLEGRO_ENV || 'test1')
 
     this.Given(/^a device (\w+)$/, function(device, callback) {
         var cfg = config.getConfigFor(device);
@@ -25,7 +26,7 @@ var rwd_steps = function() {
     });
 
     this.When(/^I navigate to the showitem page$/, function(callback) {
-        this.driver.get('http://allegro.pl/iphone-6-plus-nowy-i5147668029.html');
+        this.driver.get(env[process.env.ALLEGRO_SITE || 'allegro']);
         var self = this;
         // when opened on a mobile device an overlay is shown with the information about the mobile app
         // let's wait until it opens and close it before continuing
@@ -33,7 +34,11 @@ var rwd_steps = function() {
             // Unfortunatelly the close button is hidden behind a <div class="push"></div> and webdriver
             // cannot interact with it. So let's refresh a page and the popup will disappear automatically
             self.driver.navigate().refresh();
-            callback();
+            self.searchForAndClickFirstOffer(self.driver, 'komp')
+                .then(self.driver.wait(until.elementLocated(by.id('gallery')), 10000))
+                .then(function() {
+                    callback();
+                });
         });
     });
 
