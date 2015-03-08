@@ -17,7 +17,7 @@
   "cucumber"
 ],
   "dependencies": {
-    "cucumber": "0.48.0",
+    "cucumber": "0.4.8",
     "should": "5.1.0",
     "selenium-webdriver": "2.45.1"
   },  
