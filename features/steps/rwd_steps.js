@@ -35,7 +35,7 @@ var rwd_steps = function() {
             // cannot interact with it. So let's refresh a page and the popup will disappear automatically
             self.driver.navigate().refresh();
             self.searchForAndClickFirstOffer(self.driver, 'komp')
-                .then(self.driver.wait(until.elementLocated(by.id('gallery')), 10000))
+                .then(self.driver.wait(until.elementLocated(by.className('gallery')), 10000))
                 .then(function() {
                     callback();
                 });
