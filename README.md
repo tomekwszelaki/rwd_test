@@ -13,3 +13,4 @@ cd rwd_test
 npm install
 cucumber-js
 ```
+This will run the tests with default config. You can change the environment (for now there's only one though :P ) and the site agains which to run tests by changing two environmental variables: `ALLEGRO_ENV (defaults to: 'test1')` and `ALLEGRO_SITE (defaults to allegro)`. 
